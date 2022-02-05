@@ -1,5 +1,5 @@
+const game = document.querySelector(".game");
 const boxes = document.querySelectorAll(".box");
-const span = document.querySelectorAll(".box span");
 const resetBtn = document.querySelector("button");
 const result = document.querySelector(".result h2");
 const resultIcon = document.querySelector(".result i");
@@ -14,6 +14,7 @@ resetBtn.addEventListener("click", () => {
   });
   count = 0;
   result.innerText = "";
+  game.style.pointerEvents = "all";
 });
 
 boxes.forEach((box) => {
@@ -37,6 +38,7 @@ boxes.forEach((box) => {
       ) {
         // console.log(boxes[i].innerText);
         result.innerText = `${boxes[i].innerText} Won!`;
+        game.style.pointerEvents = "none";
       }
       i += 3;
     }
@@ -51,6 +53,7 @@ boxes.forEach((box) => {
       ) {
         // console.log(boxes[j].innerText);
         result.innerText = `${boxes[j].innerText} Won!`;
+        game.style.pointerEvents = "none";
       }
       j++;
     }
@@ -63,6 +66,7 @@ boxes.forEach((box) => {
     ) {
       // console.log(boxes[0].innerText);
       result.innerText = `${boxes[0].innerText} Won!`;
+      game.style.pointerEvents = "none";
     } else if (
       boxes[2].innerText !== "" &&
       boxes[2].innerText === boxes[4].innerText &&
@@ -70,6 +74,7 @@ boxes.forEach((box) => {
     ) {
       // console.log(boxes[2].innerText);
       result.innerText = `${boxes[2].innerText} Won!`;
+      game.style.pointerEvents = "none";
     }
     if (count === 9 && result.innerText === "") {
       result.innerText = `It's a Draw!`;
