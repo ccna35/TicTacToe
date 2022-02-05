@@ -45,6 +45,8 @@ body {
       height: 20rem;
     }
     .box {
+      border-bottom: 5px solid #881624;
+      border-radius: 1rem;
       justify-self: center;
       cursor: pointer;
       width: 100%;
@@ -61,12 +63,20 @@ body {
       }
     }
   }
+  .result {
+    padding: 5px 10px;
+    background-color: #ba2b3c;
+    color: white;
+    border-bottom: 5px solid #881624;
+    border-radius: 10px;
+  }
   button {
     padding: 5px 1rem;
     outline: none;
     border: none;
     font-size: 2rem;
-    border-radius: 5px;
+    border-bottom: 5px solid #881624;
+    border-radius: 1rem;
     cursor: pointer;
     background-color: $mainColor;
     color: white;
